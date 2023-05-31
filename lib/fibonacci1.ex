@@ -1,4 +1,4 @@
-defmodule Sequence do
+defmodule Fibonacci1 do
   defp comp_fib(0), do: [0 | 0]
   defp comp_fib(1), do: [1 | 0]
 
