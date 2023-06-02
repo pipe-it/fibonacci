@@ -9,6 +9,7 @@ defmodule Fibonacci2 do
     new_prev = curr
     new_curr = prev + curr
     fib(n - 1, new_prev, new_curr, new_acc)
+
   end
 
   defp reverse(list) do

@@ -8,7 +8,7 @@ defmodule Fibonacci1 do
     seq = [h + t | seq]
     {seq, n}
   end
-
+c
   def fib(n) do
     {seq, n} = comp_fib({[0], n})
   end
