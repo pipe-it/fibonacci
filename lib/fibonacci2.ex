@@ -9,13 +9,17 @@ defmodule Fibonacci2 do
     new_prev = curr
     new_curr = prev + curr
     fib(n - 1, new_prev, new_curr, new_acc)
-
   end
 
   defp reverse(list) do
     reverse(list, [])
   end
 
-  defp reverse([], acc), do: acc
-  defp reverse([head | tail], acc), do: reverse(tail, [head | acc])
+  defp reverse([], acc) do
+    acc
+  end
+
+  defp reverse([head | tail], acc) do
+    reverse(tail, [head | acc])
+  end
 end
