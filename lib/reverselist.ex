@@ -18,6 +18,10 @@ defmodule Reverselist do
     take([h | acc], t, n - 1)
   end
 
+  def drop(list, n) do
+    drop([], list, n)
+  end
+
   def drop([], _n) do
     []
   end
@@ -26,7 +30,7 @@ defmodule Reverselist do
     t
   end
 
-  def drop(list, n) do
+  defp drop(list, n) do
     [_h | t] = list
     drop(t, n - 1)
   end
