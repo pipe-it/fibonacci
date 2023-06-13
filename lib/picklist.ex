@@ -1,20 +1,25 @@
 defmodule Picklist do
-  defp pick(acc, [], 0) do
-    IO.puts("Value do not exist")
-    # |> Enum.reverse()
+  def pick(list, v) do
+    pick([], list, v)
   end
 
-  if v = acc do
-    defp pick(acc, _list, 0) do
+  defp pick(acc, [], _v) do
+    IO.puts("Value do not exist")
+    acc
+  end
+
+  defp pick(acc, [v|t], v) do
+
       acc
       |> Enum.reverse()
-    end
-  else
-    pick()
-  end
 
-  defp pick(acc, list, v) do
-    [h | t] = list
-    pick([h | acc], t, v)
+
+
+
+
+  
+
+  pick([h | acc], t, v)
+
   end
 end
