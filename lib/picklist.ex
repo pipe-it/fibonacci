@@ -8,18 +8,10 @@ defmodule Picklist do
     acc
   end
 
-  defp pick(acc, [v|t], v) do
+  defp pick(acc, [v | t], v) do
+    acc
+    |> Enum.reverse()
 
-      acc
-      |> Enum.reverse()
-
-
-
-
-
-  
-
-  pick([h | acc], t, v)
-
+    pick([h | acc], t, v)
   end
 end

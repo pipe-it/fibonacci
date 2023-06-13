@@ -25,10 +25,6 @@ defmodule Fibonacci4 do
 
       _ ->
         fib_list
-
-
-
-        
     end
   end
 end
