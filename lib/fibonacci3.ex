@@ -4,8 +4,13 @@ defmodule Fibonacci3 do
     |> Enum.reverse()
   end
 
-  defp comp_fib(0, acc, _prev, _curr), do: [0 | acc]
-  defp comp_fib(1, acc, _prev, curr), do: [curr | acc]
+  defp comp_fib(0, acc, _prev, _curr) do
+    [0 | acc]
+  end
+
+  defp comp_fib(1, acc, _prev, curr) do
+    [curr | acc]
+  end
 
   defp comp_fib(n, acc, prev, curr) do
     next_val = prev + curr

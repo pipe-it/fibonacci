@@ -5,13 +5,17 @@ defmodule Picklist do
 
   defp pick(acc, [], _v) do
     IO.puts("Value do not exist")
+
     acc
+    |> Enum.reverse()
   end
 
   defp pick(acc, [v | t], v) do
     acc
     |> Enum.reverse()
+  end
 
+  defp pick(acc, [h | t], v) do
     pick([h | acc], t, v)
   end
 end
