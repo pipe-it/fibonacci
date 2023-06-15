@@ -1,4 +1,12 @@
 defmodule Picklist do
+  @moduledoc """
+  This is the Pick list Module.
+  """
+  @doc """
+  Picks the numbers in a list upto given value
+
+  Returns a list.
+  """
   def pick(list, v) do
     pick([], list, v)
   end
@@ -10,7 +18,7 @@ defmodule Picklist do
     |> Enum.reverse()
   end
 
-  defp pick(acc, [v | t], v) do
+  defp pick(acc, [v | _t], v) do
     acc
     |> Enum.reverse()
   end

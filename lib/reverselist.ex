@@ -18,20 +18,17 @@ defmodule Reverselist do
     take([h | acc], t, n - 1)
   end
 
-  def drop(list, n) do
-    drop(list, n)
-  end
+  ####################################
 
   def drop([], _n) do
-    []
+    "list is smaller than drop value"
   end
 
   def drop(t, 0) do
     t
   end
 
-  defp drop(list, n) do
-    [_h | t] = list
+  def drop([_h | t], n) do
     drop(t, n - 1)
   end
 end
