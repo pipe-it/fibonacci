@@ -1,9 +1,21 @@
-defmodule Fibonacci do
+defmodule Fibonacci5 do
+  def fib(0) do
+    "Please enter an integer"
+  end
+
+  def fib(1) do
+    [0]
+  end
+
+  def fib(2) do
+    [0, 1]
+  end
+
   def fib(n) do
     if n > 0 do
       fib(0, 1, [0], n - 1)
     else
-      "Please enter a value greater than zero"
+      "Please enter a positive integer"
     end
   end
 
