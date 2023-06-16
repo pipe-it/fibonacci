@@ -1,4 +1,4 @@
-defmodule Fibonacci1 do
+defmodule Fibonacci do
   def fib(n) do
     if n > 0 do
       fib(0, 1, [0], n - 1)
